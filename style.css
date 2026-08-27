@@ -49,12 +49,21 @@ caption {
   padding: 0 1rem;
   border-radius: 0.5rem;
 }
+
+html {
+  background-color: #f4f1ff;
+  min-height: 100%;
+}
+
 nav.nav {
+  display: inline-flex;
+  justify-content: center;
+  gap: 0.5rem;
   background-color: #e6e0f8;
   padding: 0.6rem 1rem;
   border-radius: 50px;
   box-shadow: 0 3px 10px rgba(134, 115, 182, 0.2);
-  margin-bottom: 1.5rem;
+  margin: 1.5rem auto;
 }
 
 nav.nav .nav-link {
@@ -93,19 +102,12 @@ h1.signature {
 }
 
 .profile-pic {
-  width: 40em;
-  height: 28em;
+  width: 100%;
+  max-width: 280px;
+  height: auto;
   border: 4px solid #a991d4;
-  box-shadow: rgba(169, 145, 212, 0.5);
+  box-shadow: 0 4px 12px rgba(169, 145, 212, 0.5);
   border-radius: 10%;
-}
-.date-container {
-  display: inline-block;
-  padding: 4px 10px;
-  border-radius: 8px;
-  font-size: 0.9rem;
-  color: #374151;
-  margin-bottom: 8px;
 }
 
 a {
@@ -117,6 +119,12 @@ a {
 }
 .text-center {
   text-align: center;
+}
+.centered-text-block {
+  max-width: 600px;
+  margin-inline: auto;
+  text-align: center;
+  padding-inline: 20px; /* 👈 Adds a safety buffer on small screens */
 }
 .cv {
   padding: 5% 8%;
@@ -131,4 +139,152 @@ a {
   font-weight: 600;
   font-size: 1rem;
   color: #374151;
+}
+
+/* ---- Icons inside bio text ---- */
+p .fa-solid {
+  color: #8c7ae6;
+  margin-left: 0.25rem;
+}
+
+/* ---- Section heading ---- */
+h2 {
+  color: #7b6fbe;
+  margin-top: 3rem;
+}
+
+/* ---- Project grid & cards ---- */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 1.5rem auto 0;
+  text-align: left;
+}
+
+.project-card {
+  background: #ffffff;
+  border: 1px solid #e6e0f8;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 3px 10px rgba(134, 115, 182, 0.12);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(134, 115, 182, 0.25);
+}
+
+.project-card h3 {
+  color: #5c4b8c;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.project-card p {
+  color: #6e63b8;
+  flex-grow: 1;
+  margin-bottom: 1rem;
+}
+
+.project-card a {
+  display: inline-block;
+  align-self: flex-start;
+  font-weight: 600;
+  padding: 0.4rem 1rem;
+  border-radius: 50px;
+  background-color: #e6e0f8;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.project-card a:hover {
+  background-color: #8c7ae6 !important;
+  color: white !important;
+}
+
+/* ---- Footer / social links ---- */
+footer {
+  margin-top: 3rem;
+  padding: 1.5rem 0;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.social-links a {
+  color: #7b6fbe !important;
+  transition: color 0.2s ease;
+}
+
+.social-links a:hover {
+  color: #8c7ae6 !important;
+}
+/* ---- Print button ---- */
+.print-btn {
+  background-color: #8c7ae6;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.4rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-family: "Lora", serif;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  box-shadow: 0 3px 10px rgba(134, 115, 182, 0.3);
+  transition: background-color 0.2s ease;
+}
+
+.print-btn:hover {
+  background-color: #7b6fbe;
+}
+
+/* ---- Print-specific rules ---- */
+@media print {
+  header,
+  footer,
+  .print-btn {
+    display: none;
+  }
+
+  body {
+    background: white;
+    color: black;
+  }
+
+  a {
+    color: black !important;
+    text-decoration: none;
+  }
+}
+
+/* ---- Narrow readable text blocks ---- */
+.narrow-text {
+  max-width: 600px;
+  margin: 1.5rem auto;
+}
+
+/* ---- Centered goals list ---- */
+.goals-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  gap: 0.5rem;
+}
+
+.goals-list li {
+  font-weight: 600;
+  color: #6e63b8;
 }

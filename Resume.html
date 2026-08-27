@@ -14,48 +14,35 @@
   </head>
   <body>
     <header>
-      <nav>
-        <header>
-          <nav >
-            <a
-              aria-current="page"
-              href="index.html"
-              >Home</a
-            >
-            <a
-              href="cover_letter.html"
-              >Cover letter</a
-            >
-            <a
-              href="career_goals.html"
-              >Career goals</a
-            >
-        
+      <nav class="nav">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="Cover_letter.html">Cover letter</a>
+        <a class="nav-link" href="Career_goals.html">Career goals</a>  
       </nav>
     </header>
-
     <main>
 
-      <h2><strong>Diana Lozano</strong></h2>
-        <h3><em>Software Developer</em></h3>
+      <h1><strong>Diana Lozano</strong></h1>
+        <h2><em>Software Developer</em></h2>
         <h3>Toronto, ON | <span>dlozan14@wgu.edu</span></h3>
         <div class="date-container">
-          Last Updated: <span id="currentDate"></span>
+          Last Updated: August 2026
         </div>
+        <button class="print-btn" onclick="window.print()">🖨️ Save as PDF / Print</button>
       <hr />
       <!-- Skills -->
       <section>
         <h3>Skills</h3>
         <ul>
           <li>
-            <strong>Front-End:</strong> HTML, CSS, JavaScript, React, jQuery,
+            <strong>Front-End:</strong> HTML, CSS, JavaScript, React, Angular, jQuery,
             Bootstrap
           </li>
           <li>
-            <strong>Back-End:</strong> Node.js, Python, Flask, SQL, PostgreSQL
+            <strong>Back-End:</strong> Node.js, Python, Flask, PostgreSQL
           </li>
           <li>
-            <strong>Tools & Technologies:</strong> Git, GitHub, Linux Basics,
+            <strong>Tools & Technologies:</strong> GitHub, Linux Basics,
             RESTful APIs, Unit Testing, Integration Testing
           </li>
           <li>
@@ -68,59 +55,11 @@
       <hr />
 
       <section>
-        <h3>Projects / Personal Experience</h3>
-
-        <article>
-          <p>
-            <strong>Doculab:</strong> A Laboratory Documentation website
-            inspired by my paperwork-based laboratory.<br />
-            <em>Technologies:</em> HTML, CSS, React, Express.js, PostgreSQL<br />
-            <em>Highlights:</em> Developed a user-friendly interface for lab
-            analysts to document work and generate reports automatically.
-          </p>
-        </article>
-
-        <article>
-          <p>
-            <strong>BudgetBase:</strong> A Budget web application for users to
-            create budgets and track their finances.<br />
-            <em>Technologies:</em> HTML, CSS, JavaScript, Bootstrap, Flask,
-            Flask-WTF, Flask-SQLAlchemy, PostgreSQL<br />
-            <em>Highlights:</em> Implemented secure user authentication and
-            dynamic budget tracking features.
-          </p>
-        </article>
-
-        <article>
-          <p>
-            <strong>Jobly:</strong> An application for users to explore
-            companies and job postings, with functionality to apply for jobs.<br />
-            <em>Technologies:</em> HTML, CSS, React, Express.js, PostgreSQL<br />
-            <em>Highlights:</em> Designed an intuitive job search and
-            application system, enhancing user experience and engagement.
-          </p>
-        </article>
-
-        <article>
-          <p>
-            <strong>Warbler:</strong> A Twitter clone developed with a partial
-            database and project structure provided by SpringBoard.<br />
-            <em>Technologies:</em> HTML, CSS, Flask, Flask-SQLAlchemy,
-            PostgreSQL<br />
-            <em>Highlights:</em> Added real-time notifications and user
-            interactions.
-          </p>
-        </article>
-      </section>
-
-      <hr />
-
-      <section>
         <h3>Professional Experience</h3>
         <article>
           <p>
             <strong>Microbiology Analyst</strong>, Nucro-Technics | Toronto,
-            Ontario <span>(Dec 2019 – Present)</span>
+            Ontario <span>(Dec 2019 – June 2026)</span>
           </p>
           <ul>
             <li>
@@ -177,20 +116,19 @@
         </table>
       </section>
     </main>
-    <br>
      <footer>
       <p>
         <mark class="crafted"
-          >&copy; 2025 Diana Lozano — Crafted with 💜 and curiosity</mark
+          >&copy; 2026 Diana Lozano — Crafted with 💜</mark
         >
       </p>
     </footer>
 
-    <script>
+    <!-- <script>
       document.getElementById("currentDate").textContent =
         new Date().toLocaleDateString();
 
       console.log("Welcome to my resume page!");
-    </script>
+    </script> -->
   </body>
 </html>
